@@ -12,6 +12,9 @@ import 'element-ui/lib/theme-chalk/index.css'
 // import ElementUI from 'element-ui';
 // Vue.use(ElementUI);
 
+// 导入树形插件
+import TreeTable from 'vue-table-with-tree-grid'
+
 // 导入字体图标
 import './assets/fonts/iconfont.css'
 // 导入全局样式表
@@ -31,6 +34,8 @@ axios.interceptors.request.use(config => {
 Vue.prototype.$http = axios
 
 Vue.config.productionTip = false
+
+Vue.component('tree-table', TreeTable)
 
 new Vue({
   router,
